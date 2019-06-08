@@ -21,6 +21,6 @@
 
 ```html
 
-<body style="background-image: url('static/imgs/computer_light_neon_surface_50557_1600x900.jpg')">
+<body style="background-image: url('/static/imgs/computer_light_neon_surface_50557_1600x900.jpg')">
 
 ```
