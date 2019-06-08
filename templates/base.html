@@ -28,6 +28,9 @@
   
     <script type="text/javascript" src="{{ url_for("static", filename="js/script.js") }}"></script>
 
+    {% block head %}
+    {% endblock %}
+
   </head>
   <body style="background-image: url('static/imgs/computer_light_neon_surface_50557_1600x900.jpg')">
 
@@ -72,10 +75,10 @@
                     <i class="fab fa-telegram-plane" style="color: #0088cc"></i> Links
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="https://t.me/Hack_only">Our Group</a>
+                    <a class="dropdown-item" href="https://t.me/Hack_only" target="_blank">Our Group</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="https://t.me/achwakzer">Achwak's profile</a>
-                    <a class="dropdown-item" href="https://t.me/TKHMx7">Tarek's profile</a>
+                    <a class="dropdown-item" href="https://t.me/achwakzer" target="_blank">Achwak's profile</a>
+                    <a class="dropdown-item" href="https://t.me/TKHMx7" target="_blank">Tarek's profile</a>
                     <a class="dropdown-item disabled" href="#">...</a>
                   </div>
                 </li>
@@ -118,11 +121,12 @@
 
 
 
-
   <!-- Start of Creator Navbar -->
   <nav class="navbar fixed-bottom navbar-light" style="margin-bottom: 80px;">
       <div class="d-inline mx-auto" style="color: rgba(256,256,256,0.4)">
-        <h5 class="border border-primary text-secondary bg-dark p-2"><span style="font-family: 'Segoe Print'"><i class="fas fa-laptop-code"></i> by: </span>Tarek H.</h5>
+          <a href="https://t.me/TKHMx7" style="text-decoration: none" target="_blank">
+            <h5 class="border border-primary text-secondary bg-dark p-2"><span style="font-family: 'Segoe Print'"><i class="fas fa-laptop-code"></i> by: </span>Tarek H.</h5>
+          </a>
       </div>
   </nav>
   <!-- End of Creator Navbar -->
@@ -130,7 +134,7 @@
   <!-- Start of MadeIn Navbar -->
 	<nav class="navbar fixed-bottom navbar-light">
 			<div class="d-inline mx-auto">
-				<a class="navbar-brand mx-auto d-block" href="https://www.instagram.com/discover_tunisia/">
+				<a class="navbar-brand mx-auto d-block" href="https://www.instagram.com/discover_tunisia/" target="_blank">
 					<h3 class="bg-dark border border-rounded border-info px-3" style="color: rgba(256,256,256,0.4); font-family: 'Segoe Print'"><hr class="my-0">Made with all <i class="fas fa-heart" style="color: red"></i> in <img class="img-thumbnail bg-info" src="{{ url_for("static", filename="imgs/tunisia-flag-round-icon-256.png") }}" height="50px" width="50px" alt="Tunsia's Flag"><hr class="my-0"><h3>
 				</a>
 			</div>

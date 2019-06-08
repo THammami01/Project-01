@@ -15,6 +15,10 @@
 -@app.route("/<string:a>")
 -@app.route("/<int:a>")
 
+### Redirect page
+
+<meta http-equiv="Refresh" content="5; url=https://www.quackit.com/html/tags/">
+
 ```html
 
 <body style="background-image: url('static/imgs/computer_light_neon_surface_50557_1600x900.jpg')">
