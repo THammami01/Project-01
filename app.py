@@ -1,4 +1,18 @@
-import time
+from flask import Flask, render_template
 
-time.sleep(2)
-print("Hello World !")
+app = Flask(__name__)
+
+
+@app.route("/")
+@app.route("/home")
+def index():
+    return render_template("index.html")
+
+
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
+
+if __name__ == "__main__":
+        app.run(host='127.0.0.1', port=4000, debug=True)
