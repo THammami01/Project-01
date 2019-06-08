@@ -1,4 +1,18 @@
 from flask import Flask, render_template, redirect, url_for
+import datetime
+currentDT = datetime.datetime.now()
+
+card = {"img_url": "Image-Here.png",
+        "is_new": True,
+        "is_featured": True,
+        "is_super": True,
+        "title": "Giveaways",
+        "text": "Something here..",
+        "uploaded": currentDT.strftime("%Y-%m-%d %H:%M:%S"),
+        "views": "Can't be counted yet."}
+
+cards = [card, card, card, card, card, card, card]
+
 
 app = Flask(__name__)
 
@@ -10,7 +24,7 @@ def index():
 
 @app.route("/home")
 def home():
-    return render_template("home.html")
+    return render_template("home.html", cards=cards)
 
 
 @app.route("/featured")

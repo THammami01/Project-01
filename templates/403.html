@@ -2,6 +2,10 @@
 
 {% block title %}403 - HO{% endblock %}
 
+{% block head %}
+<meta http-equiv="Refresh" content="30; url={{ url_for('home') }}">
+{% endblock %}
+
 {% block body %}
 
 <!-- Start of Error's Jumbotron -->
@@ -12,6 +16,7 @@
           <blockquote class="blockquote">
             <p class="mb-0">{{ a }}</p>
           </blockquote>
+          <h4 class="text-info">You will be redirected to the home page in 30 seconds.</h4>
         </div>
       </div>
 <!-- End of Error's Jumbotron -->
