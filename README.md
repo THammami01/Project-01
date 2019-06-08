@@ -38,8 +38,10 @@
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='imgs/download.png')}}" sizes="480x480">
 <meta http-equiv="Refresh" content="5; url=https://www.quackit.com/html/tags/">
 <body style="background-image: url('/static/imgs/computer_light_neon_surface_50557_1600x900.jpg')">
-
-<!-- Add an audio -->
+<!-- Add anywhere -->
 <embed height="60" type="audio/midi" width="144" src="audio.mp3" volume="60" loop="false" autostart="false" style="visibility: hidden"/>
 
+
 ```
+
+> pip freeze > requirements.txt
