@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Featured - HO{% endblock %}
+
+
+
+{% block body %}
+
+<!-- Start of Featured's Jumbotron -->
+<div class="jumbotron jumbotron-fluid bg-dark">
+        <div class="container">
+          <h2 class="text-info">Featured page!</h2>
+          <hr class="bg-light">
+          <blockquote class="blockquote">
+            <p class="mb-0">We only show till the latest 12 cards in this page.</p>
+          </blockquote>
+        </div>
+      </div>
+<!-- End of Featured's Jumbotron -->
+      
+      
+      
+      <!-- Start of Card Group -->
+      <div class="row m-2" style="background-color: #160217">
+      
+      <!-- Start of 1nd Card -->
+      <div class="col-sm-6 col-lg-4 card p-0 mb-4 border border-info" style="background-color: #160217">
+        <img src="{{ url_for("static", filename="imgs/Image-Here.png") }}" class="card-img-top p-2 mb-0" alt="Image">
+        <div class="card-body">
+            <div class="h4 text-center"><div class="badge badge-warning badge-outline-danger badge-pill">NEW</div> <div class="badge badge-primary badge-outline-danger badge-pill">FEATURED</div></div>
+            <h5 class="card-title text-center"><div class="border border-danger rounded-top text-primary d-inline px-2" style="background-color: rgba(256,256,256,0.2);">x400 Spotify Accounts Giveaways</div></h5>
+            <p class="card-text text-center">My text here...</p>
+          <hr class="bg-info mb-0">
+          <div class="card-footer text-center">
+            <small class="text-muted">Updated 6 minutes ago</small>
+            <br>
+            <small class="text-muted">Views: *</small>
+          </div>
+        </div>
+      </div>
+      <!-- End of 1nd Card -->
+
+      </div>
+      <!-- End of Card Group -->
+      
+{% endblock %}
