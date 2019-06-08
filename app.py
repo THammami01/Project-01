@@ -27,6 +27,11 @@ def home():
     return render_template("home.html", cards=cards)
 
 
+@app.route("/intro")
+def intro():
+    return render_template("intro.html")
+
+
 @app.route("/featured")
 def featured():
     return render_template("featured.html")

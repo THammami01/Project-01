@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}Introduction to HO{% endblock %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<embed type="audio/mp3" src="{{ url_for('static', filename='audios/Beep.mp3') }}" volume="100" loop="true" autostart="true" style="visibility: hidden">
+{% endblock %}
