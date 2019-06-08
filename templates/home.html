@@ -3,9 +3,7 @@
 {% block title %}Home - HO{% endblock %}
 
 
-
 {% block body %}
-
 
 <!-- Start of Carousel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -57,48 +55,63 @@
 
 
 
-
-
-
-
 <!-- Start of Card Group -->
 <div class="row m-2" style="background-color: #160217">
 
 
-{% for i in range(12, 0, -1) %}
-
+{% for card in cards %}
 
 <!-- Start of Card -->
 <div class="col-sm-6 col-lg-4 card p-0 mb-4 border border-info" style="background-color: #160217">
-  <img src="{{ url_for("static", filename="imgs/Image-Here.png") }}" class="card-img-top p-2 mb-0" alt="Image">
+  <img src="{{ url_for('static', filename='imgs/cards_imgs/' + card.img_url) }}" class="card-img-top p-2 mb-0" alt="Image">
   <div class="card-body">
-      <div class="h4 text-center"><div class="badge badge-warning badge-outline-danger badge-pill">NEW</div></div>
-      <h5 class="card-title text-center"><div class="border border-danger rounded-top text-warning d-inline px-2">x4 Netflix Accounts Giveaways</div></h5>
-      <p class="card-text text-center">{{ i }} - My text here...</p>
-    <hr class="bg-info mb-0">
-    <div class="card-footer text-center">
-      <small class="text-muted">Updated 20 seconds ago</small>
-      <br>
-      <small class="text-muted">Views: *</small>
-    </div>
+      <div class="h4 text-center">
+  <!-- choose one of these -->
+      {% if card.is_new: %}
+          <!-- NEW  -->
+          <div class="badge badge-warning badge-outline-danger badge-pill">NEW</div>
+      {% endif %}
+
+      {% if card.is_featured: %}
+          <!-- FEATURED -->
+          <div class="badge badge-primary badge-outline-danger badge-pill">FEATURED</div>
+          {% endif %}
+      </div>
+
+
+
+  <!-- choose one of these -->
+    <h5 class="card-title text-center">
+      {% if not card.is_super: %}
+      <!-- Normal -->
+      <div class="border border-danger rounded-top text-warning d-inline px-2">
+      {% else %}
+      <!-- Super -->
+      <div class="border border-danger rounded-top text-primary d-inline px-2" style="background-color: rgba(256,256,256,0.2);">
+      {% endif %}
+    
+        {{ card.title }}
+      </div>
+    </h5>
+        
+
+
+      <p class="card-text text-center">{{ card.text }}</p>
+      <hr class="bg-info mb-0">
+      <div class="card-footer text-center">
+          <small class="text-muted">Uploaded on: {{ card.uploaded }}</small>
+          <br>
+          <small class="text-muted">Views: {{ card.views }}</small>
+      </div>
   </div>
 </div>
 <!-- End of Card -->
 
-
 {% endfor %}
-
 
 
 </div>
 <!-- End of Card Group -->
-
-
-
-
-
-
-
 
 
 
@@ -114,5 +127,6 @@
   </ul>
 </nav>
 <!-- End of Pagination -->
+
 
 {% endblock %}

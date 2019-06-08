@@ -16,7 +16,7 @@
 ## Routes
 
 ```python
-
+# Routes
 -@app.route("/<a>")
 -@app.route("/<string:a>")
 -@app.route("/<int:a>")
@@ -25,6 +25,10 @@
 -@app.route("/combineroute/<string:a>/<int:b>")
 
 ```
+
+## url_for()
+
+{{ url_for('static', filename='imgs/cards_imgs/' + card.img_url) }}
 
 ## Notes
 
